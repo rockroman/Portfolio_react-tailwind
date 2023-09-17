@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import { FaJs, FaReact, FaPython, FaGithub } from "react-icons/fa";
+import { FaJs, FaReact, FaPython, FaGithub, FaBootstrap } from "react-icons/fa";
 import { SiDjango, SiTailwindcss } from "react-icons/si";
 
 export const links = [
@@ -54,7 +54,8 @@ export const projects = [
     img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://react-projects.netlify.app/",
     github: "https://github.com/john-smilga",
-    title: "first project",
+    title: "Blade(E-commerce)",
+    tech: [<SiDjango />, <FaJs />],
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
   },
   {
@@ -63,6 +64,7 @@ export const projects = [
     url: "https://react-projects.netlify.app/",
     github: "https://github.com/john-smilga",
     title: "second project",
+    tech: [<FaReact style={{ strokeWidth: "12px" }} />],
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
   },
   {
@@ -71,6 +73,7 @@ export const projects = [
     url: "https://react-projects.netlify.app/",
     github: "https://github.com/john-smilga",
     title: "third project",
+    tech: [<SiDjango />, <FaBootstrap style={{ strokeWidth: "5px" }} />],
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
   },
 ];
