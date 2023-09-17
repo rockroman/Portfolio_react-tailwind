@@ -1,4 +1,6 @@
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import { BsEnvelopeAtFill } from "react-icons/bs";
+
 import { SiDjango } from "react-icons/si";
 import heroImg from "../assets/self.jpg";
 const Hero = () => {
@@ -25,6 +27,11 @@ const Hero = () => {
             <a href="">
               <FaTwitterSquare className="h-8 w-8 text-gray-300 custom-hover" />
             </a>
+          </div>
+          <div className="flex items-start mt-7">
+            <button className="rounded bg-blue-700 text-gray-300 py-2 px-5 text-2xl uppercase flex gap-3 justify-between items-center">
+              <BsEnvelopeAtFill className="w-5" /> Contact Me
+            </button>
           </div>
         </article>
         <article className="p-4 hidden md:block">
