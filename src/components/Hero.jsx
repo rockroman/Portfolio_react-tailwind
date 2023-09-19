@@ -11,7 +11,7 @@ import heroImg from "../assets/self.jpg";
 const Hero = () => {
   return (
     <div className="myHero bg-gray-900">
-      <div className="align-element grid md:grid-cols-2 items-center gap-8">
+      <div className=" py-6 align-element grid md:grid-cols-2 items-center gap-8">
         <article className="py-4">
           <h1 className="text-7xl text-start font-bold tracking-wider text-zinc-200">
             <span className="text-blue-700">I'm </span>Roman
@@ -32,18 +32,22 @@ const Hero = () => {
             >
               <FaLinkedin className="h-8 w-8 text-gray-300 custom-hover" />
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/roman.rakic" target="_blank">
               <FaFacebookSquare className="h-8 w-8 text-gray-300 custom-hover" />
             </a>
           </div>
           <div className="flex items-start mt-7">
-            <button className="rounded bg-blue-700 text-gray-300 py-2 px-5 text-2xl uppercase flex gap-3 justify-between items-center">
+            <a
+              className="rounded bg-blue-700 text-gray-300 py-2 px-5 text-2xl uppercase flex gap-3 justify-between items-center"
+              href="#contact"
+            >
               <BsEnvelopeAtFill className="w-5" /> Contact Me
-            </button>
+            </a>
           </div>
         </article>
         <article className="p-4 hidden md:block">
           <img src={heroImg} alt="" className="h-80 lg:95" />
+          {/*  */}
         </article>
       </div>
     </div>
