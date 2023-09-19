@@ -1,5 +1,10 @@
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
-import { BsEnvelopeAtFill } from "react-icons/bs";
+import {
+  FaGithubSquare,
+  FaLinkedin,
+  FaTwitterSquare,
+  FaFacebookSquare,
+} from "react-icons/fa";
+import { BsEnvelopeAtFill, BsFacebook } from "react-icons/bs";
 
 import { SiDjango } from "react-icons/si";
 import heroImg from "../assets/self.jpg";
@@ -18,14 +23,17 @@ const Hero = () => {
             Make your Ideas come true
           </p>
           <div className="flex gap-x-4 mt-4">
-            <a href="">
+            <a href="https://github.com/rockroman" target="_blank">
               <FaGithubSquare className="h-8 w-8 text-gray-300 custom-hover" />
             </a>
-            <a href="">
+            <a
+              href="https://www.linkedin.com/in/roman-the-dev/"
+              target="_blank"
+            >
               <FaLinkedin className="h-8 w-8 text-gray-300 custom-hover" />
             </a>
             <a href="">
-              <FaTwitterSquare className="h-8 w-8 text-gray-300 custom-hover" />
+              <FaFacebookSquare className="h-8 w-8 text-gray-300 custom-hover" />
             </a>
           </div>
           <div className="flex items-start mt-7">

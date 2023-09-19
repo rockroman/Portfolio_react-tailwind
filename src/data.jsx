@@ -1,6 +1,10 @@
 import { nanoid } from "nanoid";
 import { FaJs, FaReact, FaPython, FaGithub, FaBootstrap } from "react-icons/fa";
 import { SiDjango, SiTailwindcss } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
+import surfImg from "./assets/surf-00.png";
+import bladeImg from "./assets/blade.png";
+import flowImg from "./assets/flow.png";
 
 export const links = [
   { id: nanoid(), href: "#home", text: "home" },
@@ -51,29 +55,29 @@ export const skills = [
 export const projects = [
   {
     id: nanoid(),
-    img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://react-projects.netlify.app/",
-    github: "https://github.com/john-smilga",
+    img: bladeImg,
+    url: "https://pp5-blade.herokuapp.com/",
+    github: "https://github.com/rockroman/CI_PP5_Blade",
     title: "Blade(E-commerce)",
     tech: [<SiDjango />, <FaJs />],
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
+    text: "Blade Web-store is a Django-based e-commerce app designed to transform a custom folding knife business into a thriving online shop. With a smooth user experience, real-time content updates, and Stripe API integration, it provides a reliable platform for customers to explore and purchase top-notch knives. This transition allows the business to expand its reach and tap into new customer segments.The focus is on user-friendliness with AJAX calls updating content on the fly, eliminating the need for page reloads. Users can seamlessly browse, view detailed product descriptions, and add items to their cart. The tech stack includes Django for a robust backend and Bootstrap for an attractive, responsive design.Visit the deployed Blade Web-store to experience it firsthand.",
   },
   {
     id: nanoid(),
-    img: "https://images.pexels.com/photos/2148222/pexels-photo-2148222.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://react-projects.netlify.app/",
-    github: "https://github.com/john-smilga",
-    title: "second project",
-    tech: [<FaReact style={{ strokeWidth: "12px" }} />],
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
+    img: surfImg,
+    url: "https://surf-on-react.netlify.app/",
+    github: "https://github.com/rockroman/Basic-react-pp1",
+    title: "Surf-On(React)",
+    tech: [<FaReact style={{ strokeWidth: "12px" }} />, <TbApi />],
+    text: "Discover SURF-ON, a React web application born from a passion project. It began as a static HTML and CSS website and transformed into a dynamic platform designed to inspire surfing enthusiasts and dreamers alike. SURF-ON offers a persistent dark theme for comfortable browsing, simplifies communication with a form submission feature powered by EmailJS, showcases a dynamic image gallery using the Unsplash API, and provides real-time weather information for three surf camps. Dive into SURF-ON, explore its virtual waves, and let it ignite your own creative ideas. 🌊",
   },
   {
     id: nanoid(),
-    img: "https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://react-projects.netlify.app/",
-    github: "https://github.com/john-smilga",
-    title: "third project",
+    img: flowImg,
+    url: "https://knowledge-flow.herokuapp.com/",
+    github: "https://github.com/rockroman/CI_PP4-Knowledge-Flow",
+    title: "Knowledge-Flow(Django)",
     tech: [<SiDjango />, <FaBootstrap style={{ strokeWidth: "5px" }} />],
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
+    text: "Knowledge Flow is an interesting learning and blogging platform built with Django. It empowers users to create and share blogs within their chosen categories, engage through comments, and learn from the content of both blogs and comments. Additionally, Knowledge Flow facilitates mentorship connections by allowing users to find mentors in their areas of interest. Explore Knowledge Flow to harness the power of knowledge sharing and mentorship in one dynamic platform",
   },
 ];
