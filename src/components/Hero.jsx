@@ -1,9 +1,4 @@
-import {
-  FaGithubSquare,
-  FaLinkedin,
-  FaTwitterSquare,
-  FaFacebookSquare,
-} from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 import { BsEnvelopeAtFill, BsFacebook } from "react-icons/bs";
 
 import { SiDjango } from "react-icons/si";

@@ -1,53 +1,65 @@
+import { useRef, useState } from "react";
 import { links } from "../data";
+import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
+  const [showLinks, setShowLinks] = useState(false);
+  const linksContainerRef = useRef(null);
+  const linksRef = useRef(null);
+  const toggleLinks = () => {
+    setShowLinks(!showLinks);
+  };
+  //  add style to links container based on height of links while using useRef and
+  //  getBoundingClientRect() method
+  const linkStyles = {
+    height: showLinks
+      ? `${linksRef.current.getBoundingClientRect().height}px`
+      : "0px",
+  };
+
   return (
-    <section className="bg-gray-900 ">
-      <nav className="  align-element bg-gray-900 shadow-md flex flex-wrap items-center  py-8 ">
-        <div className="flex-1 flex justify-between items-center ">
+    <nav className="bg-gray-900 ">
+      <div className="nav-center bg-gray-900 align-element">
+        <div className="nav-header flex items-baseline justify-between p-3 ">
           <a href="/" className="flex text-lg font-semibold">
             <h2 className="text-3xl font-bold text-blue-700 text-start">
               Software <span className="text-zinc-200">Dev</span>
             </h2>
           </a>
+          <button className="nav-toggle text-zinc-200" onClick={toggleLinks}>
+            <FaBars />
+          </button>
         </div>
-        <label htmlFor="menu-toggle" className="cursor-pointer lg:hidden block">
-          <svg
-            className="fill-current text-white"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-          >
-            <title>menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-          </svg>
-        </label>
-        <input className="hidden" type="checkbox" id="menu-toggle" />
+
+        {/* <div
+          className={
+            showLinks ? "links-container show-container" : "links-container"
+          }
+        > */}
         <div
-          className="hidden lg:flex lg:items-center lg:w-auto w-full"
-          id="menu"
+          className="links-container"
+          ref={linksContainerRef}
+          style={linkStyles}
         >
-          <nav>
-            <ul className="text-xl text-center items-center gap-x-5 py-4 md:gap-x-4 lg:text-lg lg:flex  lg:pt-0">
-              {links.map((link) => {
-                const { id, href, text } = link;
-                return (
-                  <li key={id} className="py-2 lg:py-0 ">
-                    <a
-                      href={href}
-                      className="capitalize text-zinc-300 hover:pb-4 hover:border-b-4 hover:border-blue-700"
-                    >
-                      {text}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+          <ul className="links text-xl py-3 gap-x-5 " ref={linksRef}>
+            {links.map((link) => {
+              const { id, href, text } = link;
+
+              return (
+                <li key={id} className="py-2">
+                  <a
+                    href={href}
+                    className="capitalize text-zinc-300 hover:pb-1 hover:border-b-4 hover:border-blue-700"
+                  >
+                    {text}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
-      </nav>
-    </section>
+      </div>
+    </nav>
   );
 };
 export default Navbar;
