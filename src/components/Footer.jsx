@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const SERVICE_ID = import.meta.env.VITE_REACT_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_REACT_TEMPLATE_ID;
@@ -20,6 +21,7 @@ const Footer = () => {
     // fields on emailjs template
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, myForm.current, PUBLIC_KEY).then(
       (result) => {
+        toast.success("Thank You for your message");
         console.log(result.text);
       },
       (error) => {
@@ -52,7 +54,13 @@ const Footer = () => {
                 Lets have a chat!
               </h2>
               <div className="text-blue-700 mt-6">
-                Hate forms? Send me an <span className="underline">email</span>{" "}
+                Hate forms? Send me an{" "}
+                <a
+                  className="my-mail underline   text-zinc-300 "
+                  href="mailto:rock.rakic@gmail.com"
+                >
+                  email {"   "}
+                </a>
                 instead.
               </div>
             </div>

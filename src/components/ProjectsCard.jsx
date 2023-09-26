@@ -50,10 +50,10 @@ const ProjectsCard = ({ img, url, github, title, text, tech }) => {
           {text}
         </ReadMore>
         <div className="mt-4 flex gap-x-4 flex-1 items-end">
-          <a href={url}>
+          <a href={url} target="_blank">
             <TbWorldWww className="h-8 w-8 text-gray-900 hover:text-blue-700 duration-300" />
           </a>
-          <a href={url}>
+          <a href={github} target="_blank">
             <FaGithubSquare className="h-8 w-8 text-gray-900 hover:text-blue-700 duration-300" />
           </a>
         </div>
