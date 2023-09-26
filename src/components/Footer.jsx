@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import logoImg from "../assets/rock_logo.jpg";
 
 const SERVICE_ID = import.meta.env.VITE_REACT_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_REACT_TEMPLATE_ID;
@@ -64,6 +65,11 @@ const Footer = () => {
                 instead.
               </div>
             </div>
+            <img
+              src={logoImg}
+              alt=""
+              className="w-full md:w-300 lg:w-320 max-h-80"
+            />
           </div>
           <div className="">
             <div>
